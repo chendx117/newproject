@@ -1,0 +1,59 @@
+Git -- 如何删除本地仓库
+
+BlossomBetty
+
+于 2018-05-24 11:06:26 发布
+
+134427
+ 收藏 73
+首先可以创建一个文件夹，进入文件夹，并初始化一个本地仓库
+
+[python] view plain copy
+
+Administrator@GVA7WCIPQXBLZ67 MINGW64 ~  
+$ mkdir test1  
+  
+Administrator@GVA7WCIPQXBLZ67 MINGW64 ~  
+$ cd test1  
+  
+Administrator@GVA7WCIPQXBLZ67 MINGW64 ~/test1  
+$ git init  
+Initialized empty Git repository in C:/Users/Administrator/test1/.git/  
+开始删除所创建的仓库：
+
+1、$ git branch  #显示所有本地分支
+
+[python] view plain copy
+
+Administrator@GVA7WCIPQXBLZ67 MINGW64 ~/test1 (master)  
+$ git branch  
+2、$ git init   #初始化本地版本库
+
+[plain] view plain copy
+
+Administrator@GVA7WCIPQXBLZ67 MINGW64 ~/test1 (master)  
+$ git init  
+Reinitialized existing Git repository in C:/Users/Administrator/test1/.git/  
+3、$ ls -a    #找到目录下.git
+
+[python] view plain copy
+
+Administrator@GVA7WCIPQXBLZ67 MINGW64 ~/test1 (master)  
+$ ls -a  
+./  ../  .git/  
+4、$ rm -rf  .git   #删除
+
+[python] view plain copy
+
+Administrator@GVA7WCIPQXBLZ67 MINGW64 ~/test1 (master)  
+$ rm -rf .git  
+5、可以看到master分支已经删除（test1中隐藏的.git文件夹已经删除）
+
+[plain] view plain copy
+
+Administrator@GVA7WCIPQXBLZ67 MINGW64 ~/test1  
+$  
+6. 删除git之后 再去删除本地的库文件夹即可
+ rm -rf XXXX
+
+简而言之，就是 删除仓库文件夹下隐藏的.git文件夹即可
